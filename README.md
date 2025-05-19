@@ -18,7 +18,7 @@ Thông thường, cách tốt nhất là cài đặt NPM check updates toàn c�
 npm install -g npm-check-updates
 ```
 
-## 2. Run NPM Check Updates.
+## 2. Run NPM Check Updates
 
 Di chuyển đến thư mục chứa dự án của bạn bằng lệnh `cd` và thực hiện chạy lệnh sau:
 
@@ -74,8 +74,8 @@ Phiên bản hiện tại được hiển thị bên trái và phiên bản mớ
 
 ---
 
-⚠️ **Lưu ý:**  
-Khi cập nhật phiên bản, bạn nên đặc biệt cẩn thận với thay đổi ở phần **MAJOR**, vì chúng có thể làm hỏng ứng dụng nếu không kiểm tra kỹ.
+> [!WARNING]
+> Khi cập nhật phiên bản, bạn nên đặc biệt cẩn thận với thay đổi ở phần **MAJOR**, vì chúng có thể làm hỏng ứng dụng nếu không kiểm tra kỹ.
 
 ## 3. Update Patches
 
@@ -87,13 +87,13 @@ npx ncu -u -t patch
 ```
 
 Sau đó:
-1. Chạy lại lệnh cài đặt `npm i` để áp dụng cập nhật
+1. Chạy lại lệnh cài đặt `npm i` để áp dụng cập nhật.
 2. Kiểm tra xem ứng dụng vẫn chạy ổn không.
 3. Nếu mọi thứ hoạt động bình thường, chúng ta sẽ commit thay đổi — giúp dễ dàng quay lại (revert) nếu cần thiết trong tương lai.
 
 ## 4. Update Minor Versions
 
-Tiếp theo, chúng ta sẽ cập nhật **tất cả các phiên bản phụ (minor versions)**. Giống như bản vá (patch), nếu các tác giả gói tuân thủ **Semantic Versioning**, thì việc cập nhật **phiên bản phụ** cũng **không nên gây ra lỗi** nghiêm trọng.
+Tiếp theo, chúng ta sẽ cập nhật **tất cả các phiên bản phụ (minor versions)**. Giống như bản vá (patch), nếu các tác giả gói tuân thủ **Semantic Versioning**, thì việc cập nhật **phiên bản phụ** cũng **không gây ra lỗi** nghiêm trọng.
 
 ```bash
 npx ncu -u -t minor
@@ -101,7 +101,7 @@ npx ncu -u -t minor
 
 Sau đó, chạy lệnh `npm i` để cài đặt các gói mới, kiểm tra xem hệ thống vẫn hoạt động bình thường, và commit các thay đổi (để có thể khôi phục nếu cần).
 
-## 5. Update Major Versions.
+## 5. Update Major Versions
 
 Cuối cùng, cập nhật tất cả các phiên bản chính. Trước khi cập nhật, bạn cần đọc kỹ tài liệu ghi chú phát hành (release notes) để xem phiên bản mới ảnh hưởng thế nào đến dự án. Sau khi hiểu rõ tác động của cập nhật, hãy cập nhật từng thay đổi lớn trong một commit riêng biệt.
 
