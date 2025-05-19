@@ -1,8 +1,10 @@
 # Cập nhật Packages An Toàn Với NPM Check Updates
 
 Bạn mở lại dự án cũ, `npm install`, và rồi: 200+ warnings, vài chục vulnerabilities, kèm theo cảm giác "ôi thôi...".
+
 Tin tốt là có cách để xử lý chúng gọn gàng.
-Còn Tin xấu? Là nếu bạn bỏ qua, lỗi sẽ rình rập từ những nơi bạn không ngờ tới. Dù vẫn chạy được, nhưng việc sử dụng các phiên bản lỗi thời có thể là một rủi ro tiềm tàng về bảo mật và hiệu năng. Việc cập nhật các gói đúng cách không chỉ giúp dự án ổn định hơn, mà còn tiết kiệm thời gian sửa lỗi về sau. [NPM Check Updates](https://www.npmjs.com/package/npm-check-updates) (ncu) là một công cụ dòng lệnh (CLI) giúp bạn cập nhật các dependencies trong `package.json` **một cách an toàn và có kiểm soát**.
+
+Còn tin xấu? Là nếu bạn bỏ qua, lỗi sẽ rình rập từ những nơi bạn không ngờ tới. Dù có thể vẫn chạy được, nhưng việc sử dụng các phiên bản lỗi thời có thể là một rủi ro tiềm tàng về `bảo mật` và `hiệu năng`. Việc cập nhật các gói đúng cách không chỉ giúp dự án ổn định hơn, mà còn tiết kiệm thời gian sửa lỗi về sau. [NPM Check Updates](https://www.npmjs.com/package/npm-check-updates) (ncu) là một công cụ dòng lệnh (CLI) giúp bạn cập nhật các dependencies trong `package.json` **một cách an toàn và có kiểm soát**.
 
 Trong bài viết này, tôi sẽ chia sẻ quy trình 5 bước để cập nhật dependencies mà không phá vỡ codebase, cùng những lưu ý quan trọng khi áp dụng `ncu` vào dự án thực tế.
 
