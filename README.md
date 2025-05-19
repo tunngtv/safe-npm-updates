@@ -6,7 +6,8 @@ Tin tốt là có cách để xử lý chúng gọn gàng.
 
 Còn tin xấu? Là nếu bạn bỏ qua, lỗi sẽ rình rập từ những nơi bạn không ngờ tới. Dù có thể vẫn chạy được, nhưng việc sử dụng các phiên bản lỗi thời có thể là một rủi ro tiềm tàng về `bảo mật` và `hiệu năng`. Việc cập nhật các gói đúng cách không chỉ giúp dự án ổn định hơn, mà còn tiết kiệm thời gian sửa lỗi về sau. [NPM Check Updates](https://www.npmjs.com/package/npm-check-updates) (ncu) là một công cụ dòng lệnh (CLI) giúp bạn cập nhật các dependencies trong `package.json` **một cách an toàn và có kiểm soát**.
 
-Trong bài viết này, tôi sẽ chia sẻ quy trình 5 bước để cập nhật dependencies mà không phá vỡ codebase, cùng những lưu ý quan trọng khi áp dụng `ncu` vào dự án thực tế.
+<!-- Trong bài viết này, tôi sẽ chia sẻ quy trình 5 bước để cập nhật dependencies mà không phá vỡ codebase, cùng những lưu ý quan trọng khi áp dụng `ncu` vào dự án thực tế. -->
+Trong bài viết này, tôi chia sẻ cách sử dụng công cụ `npm-check-updates` (ncu) để cập nhật các dependencies trong package.json một cách có kiểm soát, từ bản vá nhỏ (patch), cập nhật phụ (minor), đến những thay đổi lớn (major). Hướng dẫn từng bước giúp bạn tránh lỗi và tiết kiệm thời gian khi làm việc với dự án cũ.
 
 ## 1. Cài đặt NPM Check Updates
 
@@ -86,7 +87,7 @@ npx ncu -u -t patch
 
 Sau đó:
 1. Chạy lại lệnh cài đặt `npm i` để áp dụng cập nhật.
-2. Kiểm tra xem ứng dụng vẫn chạy ổn không.
+2. Kiểm tra xem ứng dụng có đang chạy ổn không.
 3. Nếu mọi thứ hoạt động bình thường, chúng ta sẽ commit thay đổi — giúp dễ dàng quay lại (revert) nếu cần thiết trong tương lai.
 
 ## 4. Update Minor Versions
@@ -97,7 +98,7 @@ Tiếp theo, chúng ta sẽ cập nhật **tất cả các phiên bản phụ (m
 npx ncu -u -t minor
 ```
 
-Sau đó, chạy lệnh `npm i` để cài đặt các gói mới, kiểm tra xem hệ thống vẫn hoạt động bình thường, và commit các thay đổi (để có thể khôi phục nếu cần).
+Sau đó, chạy lệnh `npm i` để cài đặt các gói mới, kiểm tra xem hệ thống vẫn hoạt động bình thường và commit các thay đổi (để có thể khôi phục nếu cần).
 
 ## 5. Update Major Versions
 
