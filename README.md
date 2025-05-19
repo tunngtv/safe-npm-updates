@@ -1,14 +1,10 @@
 # Cập nhật Packages An Toàn Với NPM Check Updates
 
-Khi quay lại một dự án web cũ, việc cập nhật các gói (packages) là rất quan trọng để:
+Bạn mở lại dự án cũ, `npm install`, và rồi: 200+ warnings, vài chục vulnerabilities, kèm theo cảm giác "ôi thôi...".
+Tin tốt là có cách để xử lý chúng gọn gàng.
+Còn Tin xấu? Là nếu bạn bỏ qua, lỗi sẽ rình rập từ những nơi bạn không ngờ tới. Dù vẫn chạy được, nhưng việc sử dụng các phiên bản lỗi thời có thể là một rủi ro tiềm tàng về bảo mật và hiệu năng. Việc cập nhật các gói đúng cách không chỉ giúp dự án ổn định hơn, mà còn tiết kiệm thời gian sửa lỗi về sau. [NPM Check Updates](https://www.npmjs.com/package/npm-check-updates) (ncu) là một công cụ dòng lệnh (CLI) giúp bạn cập nhật các dependencies trong `package.json` **một cách an toàn và có kiểm soát**.
 
-- Nhận được các **tính năng mới**
-- Áp dụng các **bản sửa lỗi (bug fixes)**
-- Vá các **lỗi bảo mật**
-
-[NPM Check Updates](https://www.npmjs.com/package/npm-check-updates) (ncu) là một công cụ dòng lệnh (CLI) giúp bạn cập nhật các dependencies trong `package.json` **một cách an toàn và có kiểm soát**.
-
-Dưới đây là cách tiếp cận chung của tôi khi cần cập nhật một dự án sử dụng `npm`:
+Trong bài viết này, tôi sẽ chia sẻ quy trình 5 bước để cập nhật dependencies mà không phá vỡ codebase, cùng những lưu ý quan trọng khi áp dụng `ncu` vào dự án thực tế.
 
 ## 1. Cài đặt NPM Check Updates
 
@@ -111,13 +107,9 @@ Với NCU, bạn có thể lọc một gói cụ thể bằng cờ --filter ho�
 npx ncu -u -f tailwindcss
 ```
 
-Sau đó, chạy lệnh npm i để cài đặt các gói vừa được cập nhật. Tiếp theo, kiểm tra xem hệ thống vẫn hoạt động ổn định và tiến hành commit các thay đổi (để dễ dàng khôi phục nếu cần). Khi hoàn tất, tiếp tục chuyển sang nhóm gói tiếp theo và lặp lại quy trình cho từng cấp phiên bản tiếp theo (minor, major).
+Sau đó, chạy lệnh `npm i` để cài đặt các gói vừa được cập nhật. Tiếp theo, kiểm tra xem hệ thống vẫn hoạt động ổn định và tiến hành commit các thay đổi (để dễ dàng khôi phục nếu cần). Khi hoàn tất, tiếp tục chuyển sang nhóm gói tiếp theo và lặp lại quy trình cho từng cấp phiên bản tiếp theo (minor, major).
 
 ## Kết luận
-Việc cập nhật các gói trong dự án không chỉ giúp chúng ta tận dụng được các tính năng mới mà còn đảm bảo hệ thống luôn an toàn và ổn định hơn nhờ các bản vá lỗi và bản cập nhật bảo mật.
-
-Sử dụng `NPM Check Updates` kết hợp với quy trình cập nhật có kiểm soát theo từng cấp phiên bản (patch, minor, major) sẽ giúp bạn giảm thiểu rủi ro phát sinh lỗi khi nâng cấp.
-
-Hãy luôn kiểm tra kỹ sau mỗi lần cập nhật, commit các thay đổi riêng biệt để dễ dàng quay lại khi cần, đồng thời đọc kỹ tài liệu phát hành của các gói để hiểu rõ những thay đổi quan trọng.
+Việc cập nhật các gói trong dự án không chỉ giúp chúng ta tận dụng được các tính năng mới mà còn đảm bảo hệ thống luôn an toàn và ổn định hơn nhờ các bản vá lỗi và bản cập nhật bảo mật. Sử dụng `NPM Check Updates` kết hợp với quy trình cập nhật có kiểm soát theo từng cấp phiên bản (patch, minor, major) sẽ giúp bạn giảm thiểu rủi ro phát sinh lỗi khi nâng cấp. Hãy luôn kiểm tra kỹ sau mỗi lần cập nhật, commit các thay đổi riêng biệt để dễ dàng quay lại khi cần, đồng thời đọc kỹ tài liệu phát hành của các gói để hiểu rõ những thay đổi quan trọng.
 
 Chúc bạn thành công trong việc duy trì và phát triển dự án một cách an toàn, hiệu quả!
